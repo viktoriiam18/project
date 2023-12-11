@@ -1,171 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-    <style>
-        /* Add some basic styling for the gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Display 4 images in a row */
-            gap: 20px;
-        }
-        .image-item {
-            cursor: pointer;
-        }
-        .image-item img {
-            max-width: 100%;
-            height: auto;
-            transition: transform 0.3s;
-        }
-        .image-item img:hover {
-            transform: scale(1.1);
-        }
-        /* Add a modal for displaying larger images */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 20px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .modal-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-        .modal-img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-    </style>
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <section class="contacts">
-        <div class="container">
-            <div class="header">
-                <div class="logo">
-                    <img src="assets/img/logo.png" alt="Tower Tigers Crew LLC">
-                </div>
-                <div class="menu">
-                    <ul class="nav">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our work</a></li>
-                        <li><a href="./careers/careers.html">Careers</a></li>
-                    </ul>
-                    <a href="./contacts.html" class="btn btn-header">Contact Us</a>
-                </div>
+      <div class="container">
+        <div class="header">
+          <div class="logo">
+            <img src="assets/img/logo.png" alt="Tower Tigers Crew LLC" />
+          </div>
+          <div class="menu">
+            <ul class="nav">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="#">Our work</a></li>
+              <li><a href="./careers/careers.html">Careers</a></li>
+            </ul>
+            <a href="./contacts.html" class="btn btn-header">Contact Us</a>
+          </div>
+        </div>
+        <h2 class="regular-page-title">Our Work</h2>
+        <div class="section-content section-content-regular">
+          <div class="image-gallery">
+            <!-- Create image items for each image in the gallery -->
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/1.jpg')"
+            >
+              <img src="assets/img/work/1.jpg" alt="Image 1" />
             </div>
-            <h2 class="regular-page-title">Our Work</h2>
-            <div class="section-content section-content-regular">
-                <div class="image-gallery">
-                    <!-- Create image items for each image in the gallery -->
-                    <div class="image-item" onclick="openModal('assets/img/work/1.jpg')">
-                        <img src="assets/img/work/1.jpg" alt="Image 1">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/2.jpg')">
-                        <img src="assets/img/work/2.jpg" alt="Image 2">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/3.jpg')">
-                        <img src="assets/img/work/3.jpg" alt="Image 3">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/4.jpg')">
-                        <img src="assets/img/work/4.jpg" alt="Image 4">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/5.jpg')">
-                        <img src="assets/img/work/5.jpg" alt="Image 5">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/6.jpg')">
-                        <img src="assets/img/work/6.jpg" alt="Image 6">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/7.jpg')">
-                        <img src="assets/img/work/7.jpg" alt="Image 7">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/8.jpg')">
-                        <img src="assets/img/work/8.jpg" alt="Image 8">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/9.jpg')">
-                        <img src="assets/img/work/9.jpg" alt="Image 9">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/10.jpg')">
-                        <img src="assets/img/work/10.jpg" alt="Image 10">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/11.jpg')">
-                        <img src="assets/img/work/11.jpg" alt="Image 11">
-                    </div>
-                    <div class="image-item" onclick="openModal('assets/img/work/12.jpg')">
-                        <img src="assets/img/work/12.jpg" alt="Image 12">
-                    </div>
-                    
-                   
-                </div>
-            
-                <!-- Modal for displaying larger images -->
-                <div class="modal" id="imageModal">
-                    <div class="modal-content">
-                        <img src="" alt="" id="modalImage" class="modal-img" onclick="closeModal()">
-                    </div>
-                </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/2.jpg')"
+            >
+              <img src="assets/img/work/2.jpg" alt="Image 2" />
             </div>
-        </section>
-   
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/3.jpg')"
+            >
+              <img src="assets/img/work/3.jpg" alt="Image 3" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/4.jpg')"
+            >
+              <img src="assets/img/work/4.jpg" alt="Image 4" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/5.jpg')"
+            >
+              <img src="assets/img/work/5.jpg" alt="Image 5" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/6.jpg')"
+            >
+              <img src="assets/img/work/6.jpg" alt="Image 6" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/7.jpg')"
+            >
+              <img src="assets/img/work/7.jpg" alt="Image 7" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/8.jpg')"
+            >
+              <img src="assets/img/work/8.jpg" alt="Image 8" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/9.jpg')"
+            >
+              <img src="assets/img/work/9.jpg" alt="Image 9" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/10.jpg')"
+            >
+              <img src="assets/img/work/10.jpg" alt="Image 10" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/11.jpg')"
+            >
+              <img src="assets/img/work/11.jpg" alt="Image 11" />
+            </div>
+            <div
+              class="image-item"
+              onclick="openModal('assets/img/work/12.jpg')"
+            >
+              <img src="assets/img/work/12.jpg" alt="Image 12" />
+            </div>
+          </div>
+
+          <!-- Modal for displaying larger images -->
+          <div class="modal" id="imageModal">
+            <div class="modal-content">
+              <img
+                src="assets/img/work/1.jpg"
+                alt="project"
+                id="modalImage"
+                class="modal-img"
+                onclick="closeModal()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="logo">
-                    <img src="assets/img/logo-footer.png" alt="Tower Tigers Crew LLC">
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="logo">
+            <img src="assets/img/logo-footer.png" alt="Tower Tigers Crew LLC" />
+          </div>
 
-                <ul class="nav">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Our work</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-                <p>All rights reserved 2023</p>
-                <a class="btn" href="./contacts.html">Contact Us</a>
-            </div>
+          <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href=".services.html">Services</a></li>
+            <li><a href="#">Our work</a></li>
+            <li><a href="./careers/careers.html">Careers</a></li>
+          </ul>
+          <p>All rights reserved 2023</p>
+          <a class="btn" href="./contacts.html">Contact Us</a>
         </div>
-        </div>
+      </div>
     </footer>
-    <script>
-        // Function to open the modal and display a larger image
-        function openModal(imagePath) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            modal.style.display = 'block';
-            modalImage.src = imagePath;
-        }
-
-        // Function to close the modal
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-        }
-
-        // Close the modal when clicking outside the image or on the image itself
-        window.onclick = function (event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        };
-    </script>
-</body>
-
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
